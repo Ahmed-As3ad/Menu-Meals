@@ -13,7 +13,7 @@ export default function Layout() {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-100 relative">
+    <div className="flex min-h-screen relative">
       <div className="hidden md:block md:w-1/6 lg:w-1/7 h-screen">
         <Sidebar />
       </div>
