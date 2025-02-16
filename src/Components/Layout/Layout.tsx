@@ -35,7 +35,7 @@ export default function Layout() {
             onClick={toggleSidebar}
           >
             <div 
-              className="w-3/4 sm:w-2/3 md:w-1/3 h-full shadow-lg p-6 relative z-50"
+              className="w-3/4 sm:w-2/3 md:w-1/3 h-full p-6 relative z-50"
               onClick={(e) => e.stopPropagation()} 
             >
               <Sidebar />
