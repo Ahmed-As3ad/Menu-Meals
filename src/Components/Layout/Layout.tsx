@@ -31,7 +31,7 @@ export default function Layout() {
 
         {isSidebarOpen && (
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            className="fixed inset-0 bg-white bg-opacity-50 z-40"
             onClick={toggleSidebar}
           >
             <div 
