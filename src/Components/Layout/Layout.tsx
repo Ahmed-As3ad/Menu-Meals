@@ -30,17 +30,17 @@ export default function Layout() {
         </button>
 
         {isSidebarOpen && (
-          <div 
-            className="fixed inset-0 bg-white bg-opacity-50 z-40"
-            onClick={toggleSidebar}
-          >
+          // <div 
+          //   className="fixed inset-0 bg-white bg-opacity-50 z-40"
+          //   onClick={toggleSidebar}
+          // >
             <div 
               className="w-3/4 sm:w-2/3 md:w-1/3 bg-white h-full shadow-lg p-6 relative z-50"
               onClick={(e) => e.stopPropagation()} 
             >
               <Sidebar />
             </div>
-          </div>
+          // </div>
         )}
 
         <div className="p-4">
