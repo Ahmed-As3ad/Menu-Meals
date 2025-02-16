@@ -16,13 +16,13 @@ export default function Layout() {
       <div className="flex-1 h-screen overflow-y-auto">
         <Navbar />
 
-        <button
+        {/* <button
           className="md:hidden fixed top-4 left-4 bg-amber-500 text-white p-3 rounded-full shadow-lg 
                      hover:bg-amber-600 transition-all duration-300"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
           {isSidebarOpen ? "✖" : "📜"}
-        </button>
+        </button> */}
 
         {isSidebarOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
