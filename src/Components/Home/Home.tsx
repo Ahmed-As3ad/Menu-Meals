@@ -9,7 +9,9 @@ import "./Home.scss";
 interface Meal {
   idMeal: string;
   strMeal: string;
-  strMealThumb: string;
+  strCategory?: string;
+  strInstructions?: string;
+  strMealThumb?: string;
 }
 
 interface ApiResponse {
@@ -45,7 +47,7 @@ export default function Home() {
       <div className="all-meals-container">
         <h1>All Meals 🍽️</h1>
         <div className="meals-wrapper">
-          {data.meals.map((meal) => (
+          {data.meals.map((meal: Meal) => (
             <div key={meal.idMeal} className="meal-card">
               <div className="image-container">
                 <img src={meal.strMealThumb} alt={meal.strMeal} />

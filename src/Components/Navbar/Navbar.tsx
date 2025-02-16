@@ -4,6 +4,10 @@ import axios from "axios";
 import Loading from "../Loading/Loading";
 import Page404 from '../Page404/Page404';
 
+interface Category {
+  idCategory: string;
+  strCategory: string;
+}
 
 export default function Navbar() {
     const { data, isLoading, error } = useQuery({
@@ -29,7 +33,7 @@ export default function Navbar() {
     </h1>
   
     <ul className="flex flex-wrap items-center  text-gray-900 dark:text-white mt-4 rounded-xl">
-      {data.categories.map(category => (
+      {data.categories.map((category: Category) =>(
         <Link to={`categories/${category.strCategory}`} key={category.idCategory}>
           <li
             key={category.idCategory}
