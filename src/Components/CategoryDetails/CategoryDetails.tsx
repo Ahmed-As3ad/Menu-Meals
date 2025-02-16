@@ -4,6 +4,14 @@ import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import Page404 from '../Page404/Page404';
+interface Meal {
+  idMeal: string;
+  strMeal: string;
+  strCategory?: string;
+  strInstructions?: string;
+  strMealThumb?: string;
+}
+
 
 
 export default function CategoryDetails() {
@@ -32,7 +40,7 @@ export default function CategoryDetails() {
 
       <div className="all-meals-container">
   <div className="meals-wrapper">
-    {data?.meals?.map((meal) => (
+    {data?.meals?.map((meal: Meal) => (
       <div key={meal.idMeal} className="meal-card">
         <div className="image-container">
           <img src={meal.strMealThumb} alt={meal.strMeal} />
